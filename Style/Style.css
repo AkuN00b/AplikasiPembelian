@@ -1,0 +1,23 @@
+﻿body {
+
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+table {
+    width: 100%;
+}
+
+.border-top {
+    border-top: 1px solid black;
+}
+
+.border-bottom {
+    border-bottom: 1px solid black;
+}
