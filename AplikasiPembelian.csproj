@@ -71,6 +71,7 @@
     <Content Include="Page\Page_Laporan_Pembelian.aspx" />
     <Content Include="Page\Page_Master_Karyawan.aspx" />
     <Content Include="Page\Page_Pembelian.aspx" />
+    <Content Include="SQL QUERY.html" />
     <Content Include="Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>

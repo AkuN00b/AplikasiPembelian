@@ -1,0 +1,110 @@
+﻿<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>-->
+
+<!--USE [DB_PEMBELIAN]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_DeleteKaryawan]    Script Date: 2022-11-04 오전 8:47:14 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[sp_DeleteKaryawan]
+	@id		int
+AS
+BEGIN
+	DELETE FROM Karyawan WHERE id = @id
+END
+
+
+
+
+USE [DB_PEMBELIAN]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_getDataForUpdateKaryawan]    Script Date: 2022-11-04 오전 8:47:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_getDataForUpdateKaryawan]
+	@id int
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SELECT nama, alamat, no_hp FROM Karyawan WHERE id = @id;
+END
+
+
+
+
+USE [DB_PEMBELIAN]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_getDataKaryawan]    Script Date: 2022-11-04 오전 8:47:31 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_getDataKaryawan]
+	@query VARCHAR(MAX)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT id, ROW_NUMBER() OVER (ORDER BY id ASC) AS rownum, nama, alamat, no_hp
+	FROM Karyawan
+	WHERE nama LIKE '%' + @query + '%';
+END
+
+
+
+
+USE [DB_PEMBELIAN]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_InsertKaryawan]    Script Date: 2022-11-04 오전 8:47:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[sp_InsertKaryawan]
+	@nama				varchar(50),
+	@alamat				varchar(100),
+	@no_hp				int
+AS
+BEGIN
+	INSERT INTO Karyawan (nama, alamat, no_hp)
+	VALUES(@nama, @alamat, @no_hp)
+END
+
+
+
+
+USE [DB_PEMBELIAN]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_UpdateKaryawan]    Script Date: 2022-11-04 오전 8:48:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER   PROCEDURE [dbo].[sp_UpdateKaryawan]
+	@id		int,
+	@nama	varchar(50),
+	@alamat varchar(100),
+	@no_hp	varchar(13)
+AS
+BEGIN
+	UPDATE Karyawan
+	SET nama = @nama,
+		alamat = @alamat,
+		no_hp = @no_hp
+	WHERE id = @id
+END-->
