@@ -5,6 +5,9 @@
 <html>
 <head runat="server">
     <title><%# Page.Title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="../Style/Style.css" rel="stylesheet" />
 </head>
 <body>
@@ -25,6 +28,11 @@
                         <a href="../Page/Page_Master_Karyawan.aspx">Master Karyawan</a>&nbsp;|&nbsp;
                         <a href="../Page/Page_Pembelian.aspx">Pembelian</a>&nbsp;|&nbsp;
                         <a href="../Page/Page_Laporan_Pembelian.aspx">Laporan Pembelian</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
                     </td>
                 </tr>
             </table>
