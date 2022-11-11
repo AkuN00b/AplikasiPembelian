@@ -51,6 +51,15 @@ namespace AplikasiPembelian.Page
         protected global::System.Web.UI.WebControls.Button btnCari;
 
         /// <summary>
+        /// noKwitansi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal noKwitansi;
+
+        /// <summary>
         /// gridData control.
         /// </summary>
         /// <remarks>

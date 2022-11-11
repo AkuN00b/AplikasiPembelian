@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB_Pembelian.sql" />
     <Content Include="Global.asax" />
     <Content Include="Page\Page_Laporan_Pembelian.aspx" />
     <Content Include="Page\Page_Master_Karyawan.aspx" />

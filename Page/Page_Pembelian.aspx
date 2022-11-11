@@ -13,6 +13,8 @@
             <br />
             <br />
 
+            <asp:Literal id="noKwitansi" runat="server" />
+
             <asp:GridView runat="server" ID="gridData" AutoGenerateColumns="false" EmptyDataText="Tidak ada data"
                 ShowHeader="true" ShowHeaderWhenEmpty="true" PageSize="5" AllowPaging="true" AllowSorting="false"
                 DataKeyNames="id" OnPageIndexChanging="gridData_PageIndexChanging" OnRowCommand="gridData_RowCommand">

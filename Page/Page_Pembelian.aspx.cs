@@ -18,6 +18,7 @@ namespace AplikasiPembelian.Page
             {
                 loadData();
                 loadDDL();
+                loadNoKwitansi();
                 viewNamaBarang();
             }
 
@@ -212,6 +213,14 @@ namespace AplikasiPembelian.Page
             {
                 Response.Write("<script>alert('" + ex.ToString() + "')</script>");
             }
+        }
+
+        public void loadNoKwitansi()
+        {
+            DateTime today = DateTime.Today;
+            noKwitansi.Text += today.ToString("dd");
+            noKwitansi.Text += today.ToString("MM");
+            noKwitansi.Text += today.ToString("yyyy");
         }
     }
 }
